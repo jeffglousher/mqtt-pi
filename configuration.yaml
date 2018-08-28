@@ -1,1 +1,22 @@
-#empty
+mqtt:
+    host: 
+    port: 
+    clientid: default-pi
+    user: homeassistant
+    password: homeassistant
+system:
+    type: #envirophat or automationphat, other future types as expansions are made
+
+binary_sensors: #using HASS component terminology, binary_sensors, sensors, switches --> <discovery_prefix>/<component>/[<node_id>/]<object_id>/<>
+    -
+        id: 
+        relay:
+        state:
+#        state_mode: normally_closed #defaults to normally open, uncomment to switch
+#        invert_relay: true #defaults to false, uncomment to turn relay pin on by default
+        state_topic: "home-assistant/cover"
+        command_topic: "home-assistant/cover/set"
+sensors:
+    -
+switches:
+    -
