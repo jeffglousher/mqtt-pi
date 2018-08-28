@@ -1,0 +1,14 @@
+[Unit]
+Description=HASS.IO MQTT Python Worker, connects to MQTT as configuration defined entities for Home Assistant 
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=idle
+Restart=always
+RestartSec=1
+User=pi
+ExecStart=/usr/bin/python /home/pi/mqtt-pi-worker.py > /home/pi/mqtt-pi-worker.log 2>&1
+
+[Install]
+WantedBy=multi-user.target
