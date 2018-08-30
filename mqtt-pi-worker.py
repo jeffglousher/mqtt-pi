@@ -3,9 +3,7 @@ import binascii
 import yaml
 import paho.mqtt.client as mqtt
 
-from lib.garage import GarageDoor
 
-print("Welcome to Pi!")
 
 # Update the mqtt state topic
 def update_state(value, topic):
